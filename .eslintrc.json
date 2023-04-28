@@ -1,12 +1,15 @@
 {
-	"extends": "next/core-web-vitals",
+	"extends": [
+		"eslint:recommended",
+		"next/core-web-vitals"
+	],
 	"rules": {
 		"quotes": [
 			"warn",
 			"double"
 		],
 		"indent": [
-			"warn",
+			"error",
 			"tab"
 		],
 		"jsx-quotes": [
@@ -19,6 +22,24 @@
 		"semi": [
 			"error",
 			"always"
+		],
+		"no-mixed-spaces-and-tabs": [
+			"error"
+		],
+		"camelcase": [
+			"error",
+			{
+				"properties": "always"
+			}
+		],
+		"no-undef": [
+			"off"
+		],
+		"no-multiple-empty-lines": [
+			"warn",
+			{
+				"max": 1
+			}
 		]
 	}
 }
