@@ -1,8 +1,28 @@
 {
 	"extends": [
 		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
 		"next/core-web-vitals"
 	],
+	"overrides": [
+		{
+			"files": [
+				"*.ts",
+				"*.tsx"
+			],
+			"rules": {
+				"indent": [
+					"off"
+				],
+				"@typescript-eslint/indent": [
+					"error",
+					"tab"
+				]
+			}
+		}
+	],
+	"parser": "@typescript-eslint/parser",
+	"root": true,
 	"rules": {
 		"quotes": [
 			"warn",
@@ -40,6 +60,17 @@
 			{
 				"max": 1
 			}
+		],
+		"comma-spacing": [
+			"error"
+		],
+		"array-bracket-spacing": [
+			"error",
+			"never"
+		],
+		"object-curly-spacing": [
+			"error",
+			"always"
 		]
 	}
 }
